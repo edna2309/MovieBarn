@@ -1,11 +1,15 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using StudentManagementSystem.Data.Configuration.Entities;
 
-namespace MovieBarn.Web.Data
+namespace MovieBarn.Data
 {
     public class ApplicationDbContext : IdentityDbContext
     {
+        public DbSet<Genre> Genres { get; set; }
+        public DbSet<Film> Films { get; set; }
+
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
@@ -22,6 +26,10 @@ namespace MovieBarn.Web.Data
             builder.Entity<IdentityUserLogin<string>>().ToTable("UserLogins");
             builder.Entity<IdentityUserToken<string>>().ToTable("UserTokens");
 
+            builder.ApplyConfiguration(new RoleSeedConfiguration());
+            builder.ApplyConfiguration(new UserSeedConfiguration());
+            builder.ApplyConfiguration(new UserRoleSeedConfiguration());
         }
+
     }
 }

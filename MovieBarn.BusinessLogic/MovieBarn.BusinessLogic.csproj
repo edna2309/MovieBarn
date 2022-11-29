@@ -18,4 +18,9 @@
     <ProjectReference Include="..\MovieBarn.Data\MovieBarn.Data.csproj" />
   </ItemGroup>
 
+	<ItemGroup>
+	  <Folder Include="Contracts\" />
+	  <Folder Include="Repositories\" />
+	</ItemGroup>
+
 </Project>
