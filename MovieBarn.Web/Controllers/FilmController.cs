@@ -1,17 +1,26 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using MovieBarn.BusinessLogic.Contracts;
+using MovieBarn.BusinessLogic.Repositories;
 using MovieBarn.Common.Constants;
 
 namespace MovieBarn.Web.Controllers
 {
-    [Authorize(Roles = Roles.Administrator)]
+    [Authorize (Roles = Roles.Administrator)]
     public class FilmController : Controller
     {
-        // GET: FilmController
-        public ActionResult Index()
+        private readonly IFilmRepository filmRepository;
+
+        public FilmController (IFilmRepository filmRepository)
         {
-            return View();
+            this.filmRepository = filmRepository;
+        }
+        // GET: FilmController
+        public IActionResult Index()
+        {
+            var films = filmRepository.GetFilms();
+            return View(films);
         }
 
         // GET: FilmController/Details/5

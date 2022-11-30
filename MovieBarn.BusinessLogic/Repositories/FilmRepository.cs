@@ -22,9 +22,15 @@ namespace MovieBarn.BusinessLogic.Repositories
             this.mapper = mapper;
         }
 
-        public Task<List<FilmVM>> GetFilms()
+        public async Task<List<FilmVM>> GetFilms()
         {
-            throw new NotImplementedException();
+            var films = applicationDbContext.Films.ToListAsync();
+            if(films == null)
+            {
+                return new List<FilmVM>();
+            }
+            return mapper.Map<List<FilmVM>>(films);
+
         }
     }
 }
