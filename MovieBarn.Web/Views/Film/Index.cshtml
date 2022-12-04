@@ -4,22 +4,26 @@
 *@
 @{
 }
-@model FilmVM
+@model IEnumerable<FilmVM>
 <table class="table table-striped">
     <thead>
         <tr>
-            <th scope="col"></th>
-            <th scope="col"></th>
-            <th scope="col"></th>
-            <th scope="col"></th>
+            <th scope="col">@Html.DisplayNameFor(model => model.Id)</th>
+            <th scope="col">@Html.DisplayNameFor(model => model.Name)</th>
+            <th scope="col">@Html.DisplayNameFor(model => model.ShortDescription)</th>
+            <th scope="col">Actions</th>
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <th scope="row"></th>
-            <td></td>
-            <td></td>
-            <td></td>
+        @foreach (var film in Model)
+        {
+            <tr>
+            <th scope="row">@film.Id</th>
+            <td>@film.Name</td>
+            <td>@film.ShortDescription</td>
+            <td><a asp-controller="Film" asp-action="Edit" asp-route-id="@film.Id">Edit</a></td>
         </tr>
+        }
+        
     </tbody>
 </table>

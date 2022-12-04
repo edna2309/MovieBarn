@@ -67,7 +67,7 @@ namespace MovieBarn.Data.Migrations
                         new
                         {
                             Id = "88105423-d222-48ec-85c5-04e4f3cb2aa6",
-                            ConcurrencyStamp = "0260935c-1cfb-4aff-872e-51f0c515c7b0",
+                            ConcurrencyStamp = "65d41de7-165a-4951-a538-748aeccb1286",
                             Name = "Administrator",
                             NormalizedName = "ADMINISTRATOR"
                         });
@@ -167,15 +167,15 @@ namespace MovieBarn.Data.Migrations
                         {
                             Id = "807d4075-6fa0-465e-aa89-6255708fde21",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "20ccc661-0bfa-4619-9a7f-cbb51bcfebdf",
+                            ConcurrencyStamp = "a70f6b82-32c5-4a92-9163-33ddebda8c81",
                             Email = "admin@localhost.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@LOCALHOST.COM",
                             NormalizedUserName = "ADMIN@LOCALHOST.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEI9jA4vVFL+vOgH5BHGYut/ZOYm9aTfz0+hFsu6Lst28TpGO0bAxgAWjX3N1uzG/4g==",
+                            PasswordHash = "AQAAAAEAACcQAAAAECHwo1Knjg8EaP7H3Hbox/Cn9e2Yf9vpWV0mAA8cZDX+yQqqg0tSivDV0H73By7FpQ==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "0944d713-1b4e-4283-8209-5158956f944e",
+                            SecurityStamp = "1099894d-cc14-48b3-a043-514c83a4bf8a",
                             TwoFactorEnabled = false,
                             UserName = "admin@localhost.com"
                         });
