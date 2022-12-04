@@ -213,12 +213,12 @@ namespace MovieBarn.Data.Migrations
             migrationBuilder.InsertData(
                 table: "Roles",
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
-                values: new object[] { "88105423-d222-48ec-85c5-04e4f3cb2aa6", "0260935c-1cfb-4aff-872e-51f0c515c7b0", "Administrator", "ADMINISTRATOR" });
+                values: new object[] { "88105423-d222-48ec-85c5-04e4f3cb2aa6", "65d41de7-165a-4951-a538-748aeccb1286", "Administrator", "ADMINISTRATOR" });
 
             migrationBuilder.InsertData(
                 table: "Users",
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
-                values: new object[] { "807d4075-6fa0-465e-aa89-6255708fde21", 0, "20ccc661-0bfa-4619-9a7f-cbb51bcfebdf", "admin@localhost.com", true, false, null, "ADMIN@LOCALHOST.COM", "ADMIN@LOCALHOST.COM", "AQAAAAEAACcQAAAAEI9jA4vVFL+vOgH5BHGYut/ZOYm9aTfz0+hFsu6Lst28TpGO0bAxgAWjX3N1uzG/4g==", null, false, "0944d713-1b4e-4283-8209-5158956f944e", false, "admin@localhost.com" });
+                values: new object[] { "807d4075-6fa0-465e-aa89-6255708fde21", 0, "a70f6b82-32c5-4a92-9163-33ddebda8c81", "admin@localhost.com", true, false, null, "ADMIN@LOCALHOST.COM", "ADMIN@LOCALHOST.COM", "AQAAAAEAACcQAAAAECHwo1Knjg8EaP7H3Hbox/Cn9e2Yf9vpWV0mAA8cZDX+yQqqg0tSivDV0H73By7FpQ==", null, false, "1099894d-cc14-48b3-a043-514c83a4bf8a", false, "admin@localhost.com" });
 
             migrationBuilder.InsertData(
                 table: "UserRoles",

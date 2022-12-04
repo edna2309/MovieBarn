@@ -17,9 +17,9 @@ namespace MovieBarn.Web.Controllers
             this.filmRepository = filmRepository;
         }
         // GET: FilmController
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            var films = filmRepository.GetFilms();
+            var films = await filmRepository.GetFilms();
             return View(films);
         }
 
